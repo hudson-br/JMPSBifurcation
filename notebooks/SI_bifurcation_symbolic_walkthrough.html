@@ -7522,8 +7522,8 @@ It is designed to be <strong>source-of-truth</strong>: all equations shown here 
 <ul>
 <li>Constitutive model and damage functions.</li>
 <li>Base-state (axisymmetric) equilibrium: ODEs for $p_0'(r)$ and $\alpha_0''(r)$.</li>
-<li>Incremental problem for a circumferential mode $n$: the 6D first-order system (Eq. (45) in the main text).</li>
-<li>Boundary conditions in coefficient form (Eq. (52) in the main text): the $E_{ij}$ functions.</li>
+<li>Incremental problem for a circumferential mode $n$: the 6D first-order system (Eq. (44) in the main text).</li>
+<li>Boundary conditions in coefficient form (Eq. (51) in the main text): the $E_{ij}$ functions.</li>
 </ul>
 <blockquote>
 <p><strong>Notation:</strong> we work in the <strong>current configuration</strong> with radial coordinate $r$. The regularization (gradient-damage) term is <strong>pushed-forward</strong>, so gradients involve the left Cauchy–Green tensor $\mathbf B=\mathbf F\mathbf F^\mathsf T$.</p>
@@ -7531,12 +7531,12 @@ It is designed to be <strong>source-of-truth</strong>: all equations shown here 
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=6e2cf038">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=6e2cf038">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [1]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [16]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># --- Setup (local imports) ---</span>
@@ -7561,25 +7561,12 @@ It is designed to be <strong>source-of-truth</strong>: all equations shown here 
 </div>
 </div>
 </div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Loading symbolic packages.
-</pre>
-</div>
-</div>
-</div>
-</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=10e1a179">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [2]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [17]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Build the symbolic problem (this triggers the derivations)</span>
@@ -7657,7 +7644,7 @@ $$</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [18]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Display the base-state deformation gradient and invariants</span>
@@ -7706,7 +7693,7 @@ $$</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [19]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="n">Math</span><span class="p">(</span><span class="sa">r</span><span class="s2">"W(\mathbf F_0)= "</span> <span class="o">+</span> <span class="n">sp</span><span class="o">.</span><span class="n">latex</span><span class="p">(</span><span class="n">sym</span><span class="o">.</span><span class="n">strain_energy_density</span><span class="p">)))</span>
@@ -7749,7 +7736,7 @@ $$</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [5]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [20]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="n">Math</span><span class="p">(</span><span class="sa">r</span><span class="s2">"a(\alpha) = "</span> <span class="o">+</span> <span class="n">sp</span><span class="o">.</span><span class="n">latex</span><span class="p">(</span><span class="n">sym</span><span class="o">.</span><span class="n">a</span><span class="p">)))</span>
@@ -7812,7 +7799,7 @@ For the axisymmetric base state, $\nabla_x\alpha=(\alpha'(r),0)^\mathsf T$ and t
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [6]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [21]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Reproduce the "geometric Laplacian" used in the base-state damage equation</span>
@@ -7870,7 +7857,7 @@ $$</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [7]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [22]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="n">Math</span><span class="p">(</span><span class="sa">r</span><span class="s2">"\frac</span><span class="si">{dp_0}{dr}</span><span class="s2"> = "</span> <span class="o">+</span> <span class="n">sp</span><span class="o">.</span><span class="n">latex</span><span class="p">(</span><span class="n">sym</span><span class="o">.</span><span class="n">dpdr</span><span class="p">)))</span>
@@ -7913,7 +7900,7 @@ Solving this equation for $\alpha''(r)$ gives the explicit ODE used in the numer
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [8]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [23]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="n">Math</span><span class="p">(</span><span class="sa">r</span><span class="s2">"\frac{d^2\alpha_0}{dr^2} = "</span> <span class="o">+</span> <span class="n">sp</span><span class="o">.</span><span class="n">latex</span><span class="p">(</span><span class="n">sym</span><span class="o">.</span><span class="n">dda</span><span class="p">)))</span>
@@ -7983,7 +7970,7 @@ $$<p>Below we extract these coefficients directly from the symbolic expressions 
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [9]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [24]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">Math</span><span class="p">,</span> <span class="n">Markdown</span>
@@ -8230,7 +8217,7 @@ $\displaystyle 0$
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="First-order-matrix-form-(main-text-Eq.-(45))">First-order matrix form (main text Eq. (45))<a class="anchor-link" href="#First-order-matrix-form-(main-text-Eq.-(45))">¶</a></h3><p>Define the state vector
+<h3 id="First-order-matrix-form-(main-text-Eq.-(44))">First-order matrix form (main text Eq. (44))<a class="anchor-link" href="#First-order-matrix-form-(main-text-Eq.-(44))">¶</a></h3><p>Define the state vector
 $$
 \mathbf y(r)=\begin{bmatrix}U\\U'\\U''\\U'''\\B\\B'\end{bmatrix}.
 $$
@@ -8255,7 +8242,7 @@ with $\mathcal{M}(r)$ constructed below directly from the extracted coefficients
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [10]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [25]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="n">Math</span><span class="p">(</span><span class="sa">r</span><span class="s2">"U'''' = \sum_{j=1}^6 \mathcal</span><span class="si">{M}</span><span class="s2">_</span><span class="si">{4j}</span><span class="s2">\,y_j "</span> <span class="p">))</span>
@@ -8331,7 +8318,7 @@ $\displaystyle \mathcal{M}(r) = \left[\begin{matrix}0 &amp; 1 &amp; 0 &amp; 0 &a
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [11]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [26]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sp</span>
@@ -8469,7 +8456,7 @@ $\displaystyle \mathcal{M}_{66}(r) = \frac{2.0 \frac{d}{d r} \lambda{\left(r \ri
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Boundary-conditions-(Eq.-(52))">Boundary conditions (Eq. (52))<a class="anchor-link" href="#Boundary-conditions-(Eq.-(52))">¶</a></h2><p>For each boundary ($r=a$ and $r=b$), we enforce two incremental traction conditions:</p>
+<h2 id="Boundary-conditions-(Eq.-(51))">Boundary conditions (Eq. (51))<a class="anchor-link" href="#Boundary-conditions-(Eq.-(51))">¶</a></h2><p>For each boundary ($r=a$ and $r=b$), we enforce two incremental traction conditions:</p>
 <ul>
 <li>radial traction condition: $\sigma_{rr}^{(1)}=0$,</li>
 <li>shear traction condition: $\sigma_{r\theta}^{(1)}=0$.</li>
@@ -8490,7 +8477,7 @@ $$</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [12]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [27]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Display the boundary-condition coefficient functions</span>
@@ -8592,7 +8579,7 @@ $\displaystyle E26(r)= 0$
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [13]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [28]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Assemble the 2x6 boundary matrix at a generic radius r (Neumann)</span>
@@ -8639,7 +8626,7 @@ $\displaystyle \mathbf E(r)=\begin{bmatrix}E_{11}&amp;\cdots&amp;E_{16}\\E_{21}&
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [14]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [29]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -8702,7 +8689,7 @@ $\displaystyle \mathbf E(r)=\begin{bmatrix}E_{11}&amp;\cdots&amp;E_{16}\\E_{21}&
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [15]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [30]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Plot p0(r) reconstructed in equilibrium.py (via sigma_rr relation)</span>

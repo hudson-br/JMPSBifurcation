@@ -7727,9 +7727,9 @@ In the paper, these profiles show that FEM matches the axisymmetric analytical s
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
-<pre>/Users/hudson/MIT Dropbox/Hudson Rocha/Damage/Git/bifurcation/Submit/notebooks/../classes/equilibrium.py:403: IntegrationWarning: The integral is probably divergent, or slowly convergent.
+<pre>/Users/hudson/MIT Dropbox/Hudson Rocha/Damage/Git/bifurcation/Submit/notebooks/../classes/equilibrium.py:370: IntegrationWarning: The integral is probably divergent, or slowly convergent.
   sigma, _ = quad(integrand_s, self.a, r)
-/Users/hudson/MIT Dropbox/Hudson Rocha/Damage/Git/bifurcation/Submit/notebooks/../classes/equilibrium.py:403: IntegrationWarning: The maximum number of subdivisions (50) has been achieved.
+/Users/hudson/MIT Dropbox/Hudson Rocha/Damage/Git/bifurcation/Submit/notebooks/../classes/equilibrium.py:370: IntegrationWarning: The maximum number of subdivisions (50) has been achieved.
   If increasing the limit yields no improvement it is advised to analyze 
   the integrand in order to determine the difficulties.  If the position of a 
   local difficulty can be determined (singularity, discontinuity) one will 
@@ -7760,7 +7760,7 @@ In the paper, these profiles show that FEM matches the axisymmetric analytical s
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="3.-Bifurcation-thresholds-on-the-pressure%E2%80%93stretch-curve-(Fig.-4)">3. Bifurcation thresholds on the pressure–stretch curve (Fig. 4)<a class="anchor-link" href="#3.-Bifurcation-thresholds-on-the-pressure%E2%80%93stretch-curve-(Fig.-4)">¶</a></h2><p>We now compute the <strong>critical inner stretch</strong> $\lambda_a^{\mathrm{crit}}(n)$ for Fourier modes $n=2,\dots,6$ by solving the incremental boundary-value problem and enforcing the determinant condition (paper Eq. (55)).</p>
+<h2 id="3.-Bifurcation-thresholds-on-the-pressure%E2%80%93stretch-curve-(Fig.-4)">3. Bifurcation thresholds on the pressure–stretch curve (Fig. 4)<a class="anchor-link" href="#3.-Bifurcation-thresholds-on-the-pressure%E2%80%93stretch-curve-(Fig.-4)">¶</a></h2><p>We now compute the <strong>critical inner stretch</strong> $\lambda_a^{\mathrm{crit}}(n)$ for Fourier modes $n=2,\dots,6$ by solving the incremental boundary-value problem and enforcing the determinant condition (paper Eq. (54)).</p>
 <p>The helper <code>compute_bifurcation_points(...)</code>:</p>
 <ul>
 <li>solves the incremental system for each mode $n$,</li>
@@ -8172,7 +8172,7 @@ The resulting plot shows multiple mode branches $\lambda_a^{\mathrm{crit}}(n)$ a
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [9]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [7]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># ----------------------------</span>
@@ -8301,7 +8301,7 @@ The resulting plot shows multiple mode branches $\lambda_a^{\mathrm{crit}}(n)$ a
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [11]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [8]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># --- User inputs (edit these) ---</span>
