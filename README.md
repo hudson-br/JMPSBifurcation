@@ -1,4 +1,4 @@
-# JMPS (revision) — Code + data package
+# Code + data package
 
 **Paper:** *Damage localization as a bifurcation phenomenon and the resulting fracture patterns in soft materials*  
 **Authors:** Hudson Borja da Rocha & Tal Cohen
