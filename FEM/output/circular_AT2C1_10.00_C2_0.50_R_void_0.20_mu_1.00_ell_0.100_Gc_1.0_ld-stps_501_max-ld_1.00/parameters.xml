@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<dolfin xmlns:dolfin="http://fenicsproject.org">
+  <parameters name="user">
+    <parameter key="Gc" type="double" value="1" />
+    <parameter key="ell_multi" type="int" value="5" />
+    <parameter key="hsize" type="double" value="0.02" />
+    <parameter key="k_ell" type="double" value="0.0050000000000000001" />
+    <parameter key="kappa" type="int" value="10000" />
+    <parameter key="load_max" type="double" value="1" />
+    <parameter key="load_steps" type="int" value="501" />
+    <parameter key="log_load" type="int" value="0" />
+    <parameter key="mu" type="double" value="1" />
+  </parameters>
+</dolfin>

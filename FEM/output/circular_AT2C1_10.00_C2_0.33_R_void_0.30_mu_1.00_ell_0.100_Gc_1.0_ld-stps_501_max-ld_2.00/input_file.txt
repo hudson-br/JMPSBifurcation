@@ -1,0 +1,1 @@
+{"damage_model": "AT2", "mu": 1.0, "ell": 0.1, "Gc": 1.0, "k_ell": 0.005, "load_min": 0.0, "load_max": 2.0, "load_steps": 501, "Radius": 1, "R_void": 0.3, "ell_multi": 5, "hsize": 0.02, "h_base": 0.1, "R_refinement": 1.2, "mesh_type": "circular", "wave_length": 3, "perturbation": 0.2}
