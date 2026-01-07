@@ -9,7 +9,7 @@ This repository contains two complementary components:
    Axisymmetric base state + circumferential bifurcation (Fourier mode \(n\)) using a symbolic derivation (SymPy) and a numerical ODE / boundary-condition solver. This generates the phase diagrams and critical thresholds reported in the paper.
 
 2. **Finite element simulations (legacy FEniCS / `dolfin`):**  
-   Stabilized mixed FE implementation for brittle fracture (plane stress). For the revision package, we include only the **reduced outputs needed to reproduce the paper figures** and omit large visualization files (`.h5`, `.xdmf`) because they are too large to distribute with the revision.
+   Stabilized mixed FE implementation for brittle fracture (plane strain). For the revision package, we include only the **reduced outputs needed to reproduce the paper figures** and omit large visualization files (`.h5`, `.xdmf`) because they are too large to distribute with the revision.
 
 ---
 
